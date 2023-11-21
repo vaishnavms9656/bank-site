@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        width: 100%;
+        min-height: 800px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 5)),
+            url("./images/wp6871310-credit-card-wallpapers.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .col-6 {
+        margin-top: 100px;
+        margin-left: 35px;
+        width: 45%;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand mx-5">Online bank</a>
+            <form class="form-inline">
+              <a href="./main.html" class="btn btn-outline-danger my-2 my-sm-0 mx-5">Log out</a>  
+            </form>
+        </nav>
+    </header>
+
+    <section id="transactions">
+        <div class="container">
+            <div class="user-details text-center mt-5 fst-italic alert alert-warning" role="alert"
+                style="color: rgb(20, 3, 3); font-size: 50px;">
+                <h1 id="heading"></h1>
+                <p>Online Banking Services</p>
+            </div>
+            <div class="row">
+                <div class="col-6 deposit-input border shadow p-5  rounded ">
+                    <form action="" id="deposit-form" class="">
+                        <h4 class="text-center text-warning fs-3 fst-italic">Deposit</h4>
+                        <div class="form-group">
+                            <label for="amount" class="text-light">Amount</label>
+                            <input type="number" class="form-control my-2" id="deposit_amt" placeholder="Enter Amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="text-light">Password</label>
+                            <input type="password" class="form-control my-2" id="deposit_pswd"
+                                placeholder="Enter Password">
+                        </div>
+                        <div class="button text-center">
+                            <button type="button" class="btn  btn-warning mt-3" onclick="deposit()">Deposit</button>
+                        </div>
+                    </form>
+                    <div id="deposit_balance" class="m-3"></div>
+                </div>
+                <div class="col-6 deposit-input border shadow p-5 mx-5  rounded ">
+                    <form action="" id="withdraw-form" class="">
+                        <h4 class="text-center text-warning fs-3 fst-italic">Withdraw</h4>
+                        <div class="form-group">
+                            <label for="amount" class="text-light">Amount</label>
+                            <input type="number" class="form-control my-2" id="withdraw_amt" placeholder="Enter Amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="text-light">Password</label>
+                            <input type="password" class="form-control my-2" id="withdraw_pswd" placeholder="Enter Password">
+                        </div>
+                        <div class="button text-center">
+                            <button type="button" class="btn  btn-warning mt-3" onclick="withdraw()">Withdraw</button>
+                        </div>
+                    </form>
+                    <div id="withdraw_balance"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </section>
+</body>
+
+</html>
