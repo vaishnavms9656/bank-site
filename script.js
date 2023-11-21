@@ -84,7 +84,7 @@ function withdraw() {
           localStorage.setItem(Acc.pswd, JSON.stringify(Acc));
           document.getElementById("withdraw-form").reset();
         } else {
-          withdraw_balance.innerHTML = `<p class="text-danger mx-5 mt-3">Cannot Withdraw Insufficient Balance <span class="text-primary"> Available balance is Rs: ₹ ${Acc.balance}</span></p>`;
+          withdraw_balance.innerHTML = `<p class="text-danger mx-5 mt-3">Cannot Withdraw Insufficient Balance <span class="text-primary"> <br> Available balance is Rs: ₹ ${Acc.balance}</span></p>`;
         }
       }
     } else {
